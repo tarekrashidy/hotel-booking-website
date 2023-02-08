@@ -1,0 +1,32 @@
+
+.page_404{ padding:40px 0; color: crimson;
+}
+.textcenter {
+    text-align: center!important;
+    margin: 0 auto;
+}
+.page_404  img{ width:100%;}
+
+.four_zero_four_bg{
+ 
+ background-image: url(../../assets/images/404.gif);
+    height: 80vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+ }
+ 
+ 
+ .four_zero_four_bg h1{
+ font-size:80px;
+ color: crimson;
+ }
+ 
+  .four_zero_four_bg h3{
+			 font-size:80px;
+             color: crimson;
+
+			 }
+			 
+	

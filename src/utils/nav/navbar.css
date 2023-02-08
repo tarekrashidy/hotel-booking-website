@@ -1,0 +1,9 @@
+.navbar {
+     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.dropdown-end .dropdown-content{
+
+}
+.dropdown .dropdown-content{
+     z-index: 1000!important;
+}
