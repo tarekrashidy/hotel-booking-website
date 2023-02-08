@@ -14,11 +14,15 @@ const Landing = () => {
         <div className="container mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 flex items-center">
             <div className="mt-12 lg:mt-0">
-            <h1 class="text-5xl md:text-6xl font-extrabold leading-tighter tracking-tighter mb-4 aos-init aos-animate" data-aos="zoom-y-out">Make your website <span class="bg-clip-text text-transparent bg-gradient-to-r from-yellow-700 to-yellow-400">wonderful</span></h1>
-              <p className="text-lg">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima officia consequatur
-                adipisci tenetur repudiandae rerum quos.
+                  <h1 class="text-5xl md:text-6xl font-extrabold leading-tighter tracking-tighter mb-4 aos-init aos-animate" data-aos="zoom-y-out">A whole world of hotels
+<span class="bg-clip-text text-transparent bg-gradient-to-r from-yellow-700 to-yellow-400"> .wonderful</span></h1>
+                  <p className="text-xl">
+                    Looking for a particular type of hotel?
+                  </p>
+              <p className="text-xl">
+                    Book the perfect room in the best hotel, wherever it is you're heading
               </p>
+            
             </div>
             <div className="mb-12 lg:mb-0">
              <img src={landingImg} alt="" />
@@ -36,9 +40,8 @@ const Landing = () => {
       Are you ready <br />
       <span className="bg-gradient-to-r from-emerald-800 to-emerald-300  bg-clip-text p-8 text-center text-5xl md:text-6xl xl:text-7xl font-bold tracking-tight text-transparent">for an adventure?</span>
     </h2>
-    <p className="text-gray-500 text-lg">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima officia consequatur
-      adipisci tenetur repudiandae rerum quos.
+    <p className="text-gray-500 text-xl">
+                Choose From a Wide Range of Properties Which Mars.Booking Offers. Search Now! Book in 150,000 destinations across the world.
     </p>
   </div>
 </div>
@@ -52,14 +55,11 @@ const Landing = () => {
 <div className="grid md:grid-cols-2 gap-x-6 xl:gap-x-12 items-center mb-12">
   <div className="mb-6 md:mb-0">
     <div
-      className="relative overflow-hidden bg-no-repeat bg-cover relative overflow-hidden bg-no-repeat bg-cover ripple shadow-lg rounded-lg"
+                className=" relative overflow-hidden bg-no-repeat bg-cover ripple shadow-lg rounded-lg  transition duration-300 ease-in-out "
       data-mdb-ripple="true" data-mdb-ripple-color="light">
-      <img src="https://mdbootstrap.com/img/new/standard/city/018.jpg"
+      <img src={landingImg}
         className="w-full" alt="Louvre" />
-      <a href="#!">
-        <div className="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed opacity-0 hover:opacity-100 transition duration-300 ease-in-out"
-          style={{backgroundColor: "#fbfbfb"}}></div>
-      </a>
+
     </div>
   </div>
 
@@ -82,16 +82,13 @@ const Landing = () => {
 
 <div className="grid md:grid-cols-2 gap-x-6 xl:gap-x-12 items-center mb-12">
   <div className="mb-6 md:mb-0 md:order-2">
-    <div
-      className="relative overflow-hidden bg-no-repeat bg-cover relative overflow-hidden bg-no-repeat bg-cover ripple shadow-lg rounded-lg"
-      data-mdb-ripple="true" data-mdb-ripple-color="light">
-      <img src="https://mdbootstrap.com/img/new/standard/city/032.jpg"
-        className="w-full" alt="Louvre" />
-      <a href="#!">
-        <div className="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed opacity-0 hover:opacity-100 transition duration-300 ease-in-out"
-          style={{backgroundColor: "#fbfbfb"}}></div>
-      </a>
-    </div>
+              <div
+                className=" relative overflow-hidden bg-no-repeat bg-cover ripple shadow-lg rounded-lg  transition duration-300 ease-in-out "
+                data-mdb-ripple="true" data-mdb-ripple-color="light">
+                <img src={landingImg}
+                  className="w-full" alt="Louvre" />
+
+              </div>
   </div>
 
   <div className="mb-6 md:mb-0 md:order-1">
@@ -113,16 +110,13 @@ const Landing = () => {
 
 <div className="grid md:grid-cols-2 gap-x-6 xl:gap-x-12 items-center mb-12">
   <div className="mb-6 md:mb-0">
-    <div
-      className="relative overflow-hidden bg-no-repeat bg-cover relative overflow-hidden bg-no-repeat bg-cover ripple shadow-lg rounded-lg"
-      data-mdb-ripple="true" data-mdb-ripple-color="light">
-      <img src="https://mdbootstrap.com/img/new/standard/city/059.jpg"
-        className="w-full" alt="Louvre" />
-      <a href="#!">
-        <div className="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed opacity-0 hover:opacity-100 transition duration-300 ease-in-out"
-          style={{backgroundColor: "#fbfbfb"}}></div>
-      </a>
-    </div>
+              <div
+                className=" relative overflow-hidden bg-no-repeat bg-cover ripple shadow-lg rounded-lg   transition duration-300 ease-in-out "
+                data-mdb-ripple="true" data-mdb-ripple-color="light">
+                <img src={landingImg}
+                  className="w-full" alt="Louvre" />
+
+              </div>
   </div>
 
   <div className="mb-6 md:mb-0">
