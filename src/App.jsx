@@ -42,8 +42,11 @@ function App() {
     <>
       <div>
         <div className="h-screen  flex flex-col ">
+          <Layout>
+            <Landing />
 
-          <Landing />
+            
+            </Layout>
 
 
         </div>
