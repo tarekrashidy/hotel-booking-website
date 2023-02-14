@@ -95,7 +95,8 @@ const Signup = () => {
                                     className="input-bordered input   border-gray-200  w-full   "
                                     type="email"
                                     label="email address"
-                               
+                                    placeholder="Email"
+
                                     {...register("email", {
                                         required: true,
                                         pattern: /^\S+@\S+\.\S+$/,

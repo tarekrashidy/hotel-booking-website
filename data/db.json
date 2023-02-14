@@ -464,12 +464,12 @@
   ],
   "cart": [
     {
-      "id": "8794805",
-      "name": "Intercontinental San Francisco",
-      "hotelImg": "../src/assets/images/hotel/2.jpg",
-      "email": "tareq@fg.com",
-      "phoneNum": "12345678971",
-      "username": "Tarek122"
+      "id": "40418",
+      "name": "Hyatt Regency San Francisco",
+      "hotelImg": "../src/assets/images/hotel/4.jpg",
+      "email": "tarekahmed15@gmail.com",
+      "phoneNum": "01129689368",
+      "username": "tarek8455"
     }
   ]
 }
