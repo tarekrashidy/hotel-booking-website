@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, Fragment } from 'react'
 import { useQuery } from "react-query";
 import { useDispatch, useSelector } from "react-redux";
 import { getcart,deletehotel } from "./../../store/cartSlice";
 
 import { Link } from "react-router-dom";
+import Navbar from '../../utils/nav/Navbar';
 const Booked = () => {
   
     const { cart } = useSelector((state) => state.cart);
@@ -13,8 +14,10 @@ const Booked = () => {
 
   }, []);
   return (
+    <Fragment>
+      <Navbar/>
     <div className='container mx-auto'>
-       <h1 className=" pt-4  bg-gradient-to-r from-emerald-800 to-emerald-300  bg-clip-text pb-8 text-center text-5xl font-extrabold text-transparent">
+       <h1 className=" pt-4  bg-gradient-to-r from-emerald-800 to-emerald-300  bg-clip-text pb-8 text-center text-4xl font-extrabold text-transparent">
 your Bookings      </h1>
       <ul className="list-group p-8 flex gap-2 flex-col">
       { cart? cart.map((hotel) => (
@@ -47,6 +50,7 @@ your Bookings      </h1>
           : "there is no  hotels "}
         </ul>
     </div>
+    </Fragment>
   )
 }
 

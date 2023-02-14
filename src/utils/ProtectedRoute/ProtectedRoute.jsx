@@ -1,18 +1,14 @@
 import React from 'react'
-import { Navigate } from 'react-router'
-
+import { useSelector } from 'react-redux';
+import { Navigate } from "react-router-dom"; 
 const ProtectedRoute = ({ children }) => {
-    function hasJWT() {
-        let flag = false;
-  
-        localStorage.getItem("token") ? flag=true : flag=false
-       
-        return flag
-    }
-    if (true) {
+
+    const { isLogedIn } = useSelector((state) => state.auth);
+
+    if (isLogedIn==true) {
         return <>{children}</>
-    } else {
-        return <Navigate to='/login' />
+    } else if(isLogedIn == false) {
+        return <Navigate to='/Login' />
     }
 
 }

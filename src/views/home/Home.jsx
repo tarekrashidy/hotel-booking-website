@@ -46,17 +46,6 @@ const Home = () => {
   }, []);
   const navigate = useNavigate();
 
-  const handleLogout = () => {
-    signOut(auth)
-      .then(() => {
-        // Sign-out successful.
-        navigate("/");
-        console.log("Signed out successfully");
-      })
-      .catch((error) => {
-        // An error happened.
-      });
-  };
 
   const { hotels, error, isLoading } = useSelector((state) => state.hotels);
 
@@ -64,9 +53,7 @@ const Home = () => {
     <>
       <Layout>
         {isOpen ? <Alert /> : ""}
-        <button className="btn" onClick={handleLogout}>
-          Logout
-        </button>
+      
         <Slider hotels={hotels} isLoading={isLoading} error={error} />
         <FilterSlider hotels={hotels} isLoading={isLoading} error={error} />
         <List hotels={hotels} isLoading={isLoading} error={error} />

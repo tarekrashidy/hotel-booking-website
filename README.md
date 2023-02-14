@@ -31,6 +31,7 @@ the  user able to see all his bookings.
 - using react router
 - using swiper the most modern touch slider with transitions amazing  behavior
 - using tailwindcss and daisyui  for styling
+- Authentication with firebase
 
 ## API Reference
 
@@ -80,6 +81,8 @@ Install my-project with npm
  - [vite js](https://vitejs.dev/)
  - [hero icons](https://heroicons.com/)
  - [surge](https://surge.sh/)
+ - [vercel](https://vercel.com)
+ - [firebase](https://firebase.google.com)
  
 ## Demo
 

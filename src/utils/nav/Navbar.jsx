@@ -1,10 +1,15 @@
 import React, { useState, useEffect } from 'react'
 import { useQuery } from "react-query";
 import { useDispatch, useSelector } from "react-redux";
-// @ts-ignore
+import logo from '../../assets/images/Backgroddund.png'
+import { logInOut } from "../../store/authSlice";
 import { getcart } from "./../../store/cartSlice";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { signOut } from "firebase/auth";
+import { onAuthStateChanged } from "firebase/auth";
+import { NavLink } from 'react-router-dom'
 
+import { auth } from "../../../firebase-config";
 import "./navbar.css"
 function Navbar() {
   // @ts-ignore
@@ -15,7 +20,26 @@ function Navbar() {
 
   }, []);
 
+  const { isLogedIn } = useSelector((state) => state.auth);
+  const navigate = useNavigate();
 
+  const handleLogout = () => {
+    signOut(auth)
+      .then(() => {
+        dispatch(logInOut());
+        navigate("/");
+        console.log("Signed out successfully");
+      })
+      .catch((error) => {
+        // An error happened.
+      });
+  };
+  // const handelLogin = () => {
+
+
+
+  //   dispatch(logInOut());
+  // };
   const [theme, setTheme] = useState("light");
   const toggleTheme = () => {
       if (theme == "dark") {
@@ -33,15 +57,38 @@ function Navbar() {
       <div className="flex-1">
         
 
-        <Link to={`/`} className="active">
-          
-        <span className="btn btn-ghost normal-case text-xl text-emerald-600"><span className='text-yellow-400'>Mars</span>  Booking    </span>
+        <Link to={`/home`} className="active">
+          <img src={logo}
+            className=" mx-auto max-w-[8rem]" alt="Louvre" /> 
+
           
           </Link >
 
         </div>
         
       <div className="flex-none">
+
+        {isLogedIn ? <button className="btn btn-ghost " onClick={handleLogout}>
+          log out <svg xmlns="http://www.w3.org/2000/svg"  fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 text-red-700">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15m3 0l3-3m0 0l-3-3m3 3H9" />
+          </svg>
+
+        </button>:
+
+          <NavLink className="" to="/login">
+            <button className="btn btn-ghost">
+              log in
+            </button>
+                            </NavLink>
+        
+
+}
+
+
+        {/* <button className="btn btn-ghost " onClick={handleLogout}>
+          {isLogedIn ? "log out" : "log in"}
+        </button> */}
+
       <label className="swap swap-rotate btn-ghost btn-circle" >
 
 <input type="checkbox" className="hidden " onClick={toggleTheme} />
