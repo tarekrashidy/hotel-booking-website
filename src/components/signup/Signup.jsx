@@ -4,6 +4,7 @@ import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../../../firebase-config';
 import California from '../../assets/images/city/California.jpg'
 import { useForm } from "react-hook-form";
+import logo from '../../assets/images/Backgroddund.png'
 
 const Signup = () => {
     const navigate = useNavigate();
@@ -48,7 +49,8 @@ const Signup = () => {
             <section className='mx-auto flex flex-col xs:flex-col sm:flex-col md:flex-row lg:flex-row xl:flex-row  border-gray-100 gap-2 border-2 p-6 rounded-md shadow-lg '>
                 <div className=' basis-1/2 mx-auto border-gray-100 flex column items-center justify-center '>
                     <div>
-                        <h3 className='text-xl text-bold py-3 text-center'> Mars.Booking </h3>
+                        <img src={logo}
+                            className=" mx-auto max-w-[12rem]" alt="Louvre" />   
                         <h3 className='text-2xl font-semibold py-4 text-center'> Sign up</h3>
                         <form
                             onSubmit={handleSubmit(onSubmit)}

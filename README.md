@@ -92,6 +92,9 @@ Install my-project with npm
 ## Watch the video
 
 [![Watch the video](thumb.png)](./hotel.wmv)
+## Video Demo
+
+[![Watch the video](./d2.png)](./demo.wmv)
 
 ## images
 
@@ -100,3 +103,5 @@ Install my-project with npm
 ![img1](img3.png?raw=true "Title")
 ![img1](img4.png?raw=true "Title")
 ![img1](img5.png?raw=true "Title")
+![img1](img6.png?raw=true "Title")
+![img1](img7.png?raw=true "Title")
